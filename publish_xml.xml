@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE best_Player [
+	<!ELEMENT best_Player (Player*)>
+	<!ELEMENT Player (PlayerName,Domicile,Gender,DateOfBirth,Team,JoinDate,Email,Positions,PhoneNumbers,Achievements)>
+	<!ELEMENT PlayerName (firstName,lastName)>
+		<!ELEMENT firstName (#PCDATA)>
+		<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT Domicile (Number,Street,City,PostCode)>
+		<!ELEMENT Number (#PCDATA)>
+		<!ELEMENT Street (#PCDATA)>
+		<!ELEMENT City (#PCDATA)>
+		<!ELEMENT PostCode (#PCDATA)>
+	<!ELEMENT Gender (#PCDATA)>
+	<!ELEMENT DateOfBirth (#PCDATA)>
+	<!ELEMENT Team (#PCDATA)>
+	<!ELEMENT JoinDate (#PCDATA)>
+	<!ELEMENT Email (#PCDATA)>
+	<!ELEMENT Positions (Position)>
+		<!ELEMENT Position (#PCDATA)>
+	<!ELEMENT PhoneNumbers (phone*)>
+		<!ELEMENT phone (#PCDATA)>
+	<!ELEMENT Achievements (Acmt*)>
+		<!ELEMENT Acmt (#PCDATA)>
+	<!ATTLIST Player id ID #REQUIRED>
+	<!ATTLIST Player type (big|small) "big">
+	<!ATTLIST phone type (home|mobile) "home">
+	<!ATTLIST Acmt type (Personal|team) "team">
+]>
 <?xml-stylesheet type="text/xsl" href="best_player.xsl"?>
 <best_Player>
-    <Player id="p1" >
+    <Player id="p1" type='big'>
 		<PlayerName>
 			<firstName>James</firstName>
 			<lastName>Anderson</lastName>
@@ -30,7 +57,7 @@
 				<Acmt type="team">2021 NBA National Champion</Acmt>
 		</Achievements>
 	</Player>
-    <Player id="p2">
+    <Player id="p2" type='big'>
         <PlayerName>
             <firstName>Jenny</firstName>
             <lastName>Will</lastName>
@@ -58,7 +85,7 @@
             <Acmt type="team">2021 Women’s NBA Champion</Acmt>
         </Achievements>
     </Player>
-	<Player id="p3">
+	<Player id="p3" type='small'>
         <PlayerName>
             <firstName>Curry</firstName>
             <lastName>Henderson</lastName>
