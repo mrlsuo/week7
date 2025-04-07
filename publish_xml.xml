@@ -2,9 +2,7 @@
 <!DOCTYPE best_Player [
 	<!ELEMENT best_Player (Player*)>
 	<!ELEMENT Player (PlayerName,Domicile,Gender,DateOfBirth,Team,JoinDate,Email,Positions,PhoneNumbers,Achievements)>
-	<!ELEMENT PlayerName (firstName,lastName)>
-		<!ELEMENT firstName (#PCDATA)>
-		<!ELEMENT lastName (#PCDATA)>
+	<!ELEMENT PlayerName (#PCDATA)>
 	<!ELEMENT Domicile (Number,Street,City,PostCode)>
 		<!ELEMENT Number (#PCDATA)>
 		<!ELEMENT Street (#PCDATA)>
@@ -29,10 +27,7 @@
 <?xml-stylesheet type="text/xsl" href="best_player.xsl"?>
 <best_Player>
     <Player id="p1" type='big'>
-		<PlayerName>
-			<firstName>James</firstName>
-			<lastName>Anderson</lastName>
-		</PlayerName>
+		<PlayerName>James Anderson</PlayerName>
 		<Domicile>
 			<Number>12</Number>
 			<Street>North London street</Street>
@@ -58,10 +53,7 @@
 		</Achievements>
 	</Player>
     <Player id="p2" type='big'>
-        <PlayerName>
-            <firstName>Jenny</firstName>
-            <lastName>Will</lastName>
-        </PlayerName>
+        <PlayerName>Jenny Will</PlayerName>
         <Domicile>
             <Number>84</Number>
             <Street>New Ohio Avenue</Street>
@@ -86,10 +78,7 @@
         </Achievements>
     </Player>
 	<Player id="p3" type='small'>
-        <PlayerName>
-            <firstName>Curry</firstName>
-            <lastName>Henderson</lastName>
-        </PlayerName>
+        <PlayerName>Curry Henderson</PlayerName>
         <Domicile>
             <Number>136</Number>
             <Street>National Congress Avenue</Street>
